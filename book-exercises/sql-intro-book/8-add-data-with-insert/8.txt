@@ -1,0 +1,1 @@
+PostgreSQL would still insert  NULL into the boolean column. It allows this. It also does not matter that it has a default value set or not, regardless of the datatype. Even though leaving that field empty would insert NULL by default, if NULL is explicitly entered, it will bypass any default value set for any datatype (not just booleans).

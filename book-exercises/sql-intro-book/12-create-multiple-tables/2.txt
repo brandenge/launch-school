@@ -1,0 +1,18 @@
+INSERT INTO continents
+(id, continent_name) VALUES
+(1, 'Africa'),
+(2, 'Antarctica'),
+(3, 'Asia'),
+(4, 'Australia'),
+(5, 'Europe'),
+(6, 'North America'),
+(7, 'South America');
+
+INSERT INTO countries
+(id, name, capital, population, continent_id) VALUES
+(1, 'Brazil', 'Brasilia', 208385000, 7),
+(2, 'Egypt', 'Cairo', 96308900, 1),
+(3, 'France', 'Paris', 67158000, 5),
+(4, 'Germany', 'Berlin', 82349400, 5),
+(5, 'Japan', 'Tokyo', 126672000, 3),
+(6, 'USA', 'Washington D.C.', 325365189, 6);

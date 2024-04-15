@@ -1,0 +1,6 @@
+ALTER TABLE celebrities
+RENAME TO singers;
+
+SELECT * FROM singers WHERE occupation NOT LIKE '%Singer%';
+
+DELETE FROM singers WHERE occupation NOT LIKE '%Singer%';

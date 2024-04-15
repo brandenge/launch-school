@@ -1,0 +1,23 @@
+<html>
+  <body>
+
+    <div class="posts">
+      <% posts.each do |post| %>
+        <div class="post">
+
+          <h2 class="title">
+            <a href="/show_post/<%= post['id'] %>"><%= post['title'] %></a>
+          </h2>
+
+          <small class="meta">
+            <span class="author">by <%= post['author'] %> -</span>
+            <em class="created_at"><%= post['created_at'] %></em>
+          </small>
+
+        </div>
+        <hr />
+      <% end %>
+    </div>
+
+  </body>
+</html>

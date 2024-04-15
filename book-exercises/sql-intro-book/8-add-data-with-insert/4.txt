@@ -1,0 +1,2 @@
+INSERT INTO celebrities (first_name, last_name, date_of_birth, occupation)
+VALUES ('Scarlett', 'Johansson', '1984-11-22', 'Actress');

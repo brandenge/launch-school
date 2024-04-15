@@ -1,0 +1,1 @@
+SELECT max(max_age_years) FROM animals;

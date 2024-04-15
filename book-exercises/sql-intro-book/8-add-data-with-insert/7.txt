@@ -1,0 +1,6 @@
+ALTER TABLE celebrities
+  ALTER COLUMN last_name DROP NOT NULL;
+
+INSERT INTO celebrities (first_name, date_of_birth, occupation, deceased)
+VALUES ('Madonna', '08/16/1958', 'Singer, Actress', false),
+       ('Prince', '06/07/1958', 'Singer, Songwriter, Musician, Actor', true);

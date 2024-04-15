@@ -1,0 +1,8 @@
+SELECT sum(p.product_cost) AS "Total cost of Natasha O'Sheas' orders"
+FROM products AS p JOIN order_items AS oi
+ON p.id = oi.product_id
+JOIN orders AS o
+ON o.id = oi.order_id
+JOIN customers AS c
+ON c.id = o.customer_id
+WHERE c.customer_name = 'Natasha O''Shea';

@@ -1,0 +1,30 @@
+{
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "result": "The result is: ",
+    "getNumber": "Please enter number",
+    "invalidNumber": "Hmmm...that doesn't look like a valid number.",
+    "getOperator": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide: ",
+    "invalidOperator": "Please enter 1, 2, 3, or 4 to select an operator.",
+    "continueCalculation": "Do you want to perform another calculation? (y/n): ",
+    "invalidYesOrNo": "Please enter y for yes or n for no.",
+    "errors": {
+      "command": "Error executing command: "
+    },
+    "goodbye": "Goodbye!"
+  },
+  "cn": {
+    "welcome": "欢迎使用计算器!",
+    "result": "结果是: ",
+    "getNumber": "请输入号码",
+    "invalidNumber": "嗯...这看起来不像是一个有效的数字.",
+    "getOperator": "您要执行什么运算？\n1) 加 2) 减 3) 乘 4) 除：",
+    "invalidOperator": "请输入 1、2、3 或 4 以选择运算符.",
+    "continueCalculation": "您想再进行一次计算吗？ y（是）或 n（否）: ",
+    "invalidYesOrNo": "请输入 y（是）或 n（否）.",
+    "errors": {
+      "command": "执行命令时出错："
+    },
+    "goodbye": "再見!"
+  }
+}

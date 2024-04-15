@@ -1,0 +1,71 @@
+Follow the Twitter API guide using Postman at:
+
+https://developer.twitter.com/en/docs/tutorials/postman-getting-started
+
+Follow the instructions. In addition to the instructions provided by the guide, you will also need to fork the Twitter API collection to your own personal workstation in Postman to be able to send requests. Then change the Authorization tab (left column) drop down menu labeled "Add authorization data to" and select "Request headers" in the drop down menu. In right column, make sure the option at the bottom called "Encode the parameters in the Authorization header" is showing and is checked to enable it.
+
+To fetch a tweet, select "Tweet Lookup" in the left column in Postman, and then "Single Tweet"
+
+Fetching tweet ID 20:
+
+HTTP Request
+
+(authorizations, query parameters, and ID path variable parameter included)
+
+GET https://api.twitter.com/2/tweets/:id?tweet.fields=created_at,attachments&expansions=author_id&user.fields=location,entities
+
+HTTP Response
+
+{
+  "data": {
+      "text": "just setting up my twttr",
+      "created_at": "2006-03-21T20:50:14.000Z",
+      "author_id": "12",
+      "id": "20"
+  },
+  "includes": {
+      "users": [
+          {
+              "name": "jack⚡️",
+              "location": "🌊",
+              "entities": {
+                  "description": {
+                      "hashtags": [
+                          {
+                              "start": 0,
+                              "end": 8,
+                              "tag": "bitcoin"
+                          }
+                      ]
+                  }
+              },
+              "id": "12",
+              "username": "jack"
+          }
+      ]
+  }
+}
+
+Fetching tweet id 19 which is not searchable:
+
+HTTP Request
+
+(authorizations, query parameters, and ID path variable parameter included)
+
+GET https://api.twitter.com/2/tweets/:id?tweet.fields=created_at,attachments&expansions=author_id&user.fields=location,entities
+
+HTTP Response
+
+{
+  "errors": [
+      {
+          "value": "19",
+          "detail": "Could not find tweet with id: [19].",
+          "title": "Not Found Error",
+          "resource_type": "tweet",
+          "parameter": "id",
+          "resource_id": "19",
+          "type": "https://api.twitter.com/2/problems/resource-not-found"
+      }
+  ]
+}

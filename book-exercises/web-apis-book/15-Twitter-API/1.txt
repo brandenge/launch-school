@@ -1,0 +1,28 @@
+Follow the Twitter API guide using Postman at:
+
+https://developer.twitter.com/en/docs/tutorials/postman-getting-started
+
+Follow the instructions. In addition to the instructions provided by the guide, you will also need to fork the Twitter API collection to your own personal workstation in Postman to be able to send requests. Then change the Authorization tab (left column) drop down menu labeled "Add authorization data to" and select "Request headers" in the drop down menu. In right column, make sure the option at the bottom called "Encode the parameters in the Authorization header" is showing and is checked to enable it.
+
+Put the text of the tweet in the body of the request, not as a query parameter.
+
+See this Twitter doc for more info:
+
+https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/quick-start
+
+To create a tweet, select "Manage Tweets" in the left column in Postman, and then "Create a Tweet"
+
+HTTP Request
+
+(authorizations and body parameter included)
+
+POST https://api.twitter.com/2/tweets
+
+HTTP Response
+
+{
+  "data": {
+      "id": "1474484102451671040",
+      "text": "Hello World Test #3!"
+  }
+}

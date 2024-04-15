@@ -1,0 +1,4 @@
+SELECT DISTINCT singers.first_name AS "Singers with Warner Bros label"
+FROM singers INNER JOIN albums
+ON singers.id = albums.singer_id
+WHERE albums.label LIKE '%Warner Bros%';

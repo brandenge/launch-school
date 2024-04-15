@@ -1,0 +1,3 @@
+SELECT countries.name AS "Country", continents.continent_name AS "Continent"
+FROM countries INNER JOIN continents
+ON countries.continent_id = continents.id;

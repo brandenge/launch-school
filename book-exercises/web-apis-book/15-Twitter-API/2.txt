@@ -1,0 +1,43 @@
+First, retrieve your user id, as you will need to provide this in the retweet request. To do this, select "User by Username" in the left column in Postman. Do not select any of the options underneath it, as those are only examples and you cannot send anything from there. Only options with an HTTP method next to the name (GET is in green text next to "User by Username" in this case) can be sent.
+
+Enter your screen name as the value for the "username" key in the path variable parameter at the bottom of the "Params" tab.
+
+In the authorizations tab, select "Bearer token" in the drop down menu for the "Type" of authorization, per the instructions provided in that screen.
+
+Enter your bearer token (taken from your app authorizations) in the authorizations tab, right column.
+
+HTTP Request
+
+(username path variable parameter and bearer token authorization included)
+
+GET https://api.twitter.com/2/users/by/username/:username
+
+HTTP Response
+
+{
+  "data": {
+      "id": "1474204846106595331",
+      "name": "Jane Doe",
+      "username": "JaneDoe01393853"
+  }
+}
+
+Next, to retweet a tweet, select "Retweets" in the left column in Postman, and then "Retweet a Tweet"
+
+Enter your own user id (taken from the first step above where you retrieved your own id using a "User by Username" GET request) in as the value for the "id" key of the path variable parameter at the bottom of the "Params" tab.
+
+Enter your authorizations the same as before in the right column of the authorizations tab, "Add authorization data to" to "Request headers" selected (in the left column), and "Encode the parameters with Authorization header" option selected (in the right column).
+
+Finally, in the "Body" tab, edit the body example provided to include value of the tweet id that is to be retweeted for the "tweet_id" key (put the id in a string format, surrounded by double quotes).
+
+HTTP Request
+
+POST https://api.twitter.com/2/tweets
+
+HTTP Response
+
+{
+  "data": {
+      "retweeted": true
+  }
+}

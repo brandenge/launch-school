@@ -1,0 +1,10 @@
+SELECT name AS "Country", capital AS "Capital"
+FROM countries
+WHERE countries.continent_id IN (
+  SELECT id FROM continents WHERE id = 5
+);
+
+SELECT countries.name AS "Country", countries.capital AS "Capital"
+FROM countries INNER JOIN continents
+ON countries.continent_id = continents.id
+WHERE continents.continent_name = 'Europe';

@@ -1,0 +1,22 @@
+ALTER TABLE singers ADD UNIQUE (id);
+
+CREATE TABLE albums (
+  id serial PRIMARY KEY,
+  album_name varchar(100),
+  release_date date,
+  genre varchar(100),
+  label varchar(100),
+  singer_id integer,
+  FOREIGN KEY (singer_id) REFERENCES singers(id)
+);
+
+INSERT INTO albums
+(album_name, release_date, genre, label, singer_id) VALUES
+('Born to Run', '1975-08-25', 'Rock and roll', 'Columbia', 1),
+('Purple Rain', '1984-06-25', 'Pop, R&B, Rock',	'Warner Bros', 8),
+('Born in the USA', '1984-06-04', 'Rock and roll, pop', 'Columbia',	1),
+('Madonna', '1983-07-27', 'Dance-pop, post-disco', 'Warner Bros', 7),
+('True Blue', '1986-06-30', 'Dance-pop, Pop', 'Warner Bros', 7),
+('Elvis', '1956-10-19',	'Rock and roll, Rhythm and Blues', 'RCA Victor', 9),
+('Sign o'' the Times', '1987-03-30', 'Pop, R&B, Rock, Funk', 'Paisley Park, Warner Bros',	8),
+('G.I. Blues', '1960-10-01', 'Rock and roll, Pop', 'RCA Victor', 9);

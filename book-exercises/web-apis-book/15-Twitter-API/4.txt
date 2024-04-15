@@ -1,0 +1,21 @@
+This exercise is not currently possible (I think) without access to Twitter's Enterprise API (v2), or "Elevated" access privileges to be able to access older Twitter API v1.1 endpoints.
+
+See the below link. Next to "Geo" it states "COMING SOON".
+
+https://developer.twitter.com/en/docs/twitter-api/migrate/twitter-api-endpoint-map
+
+Below is the older Twitter API documentation for Geo objects, which no longer works without "Elevated" access:
+https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/object-model/geo
+
+Per the error message returned below when trying to access
+
+https://api.twitter.com/1.1/geo/search.json?long=-122.3736&lat=45.4300&granularity=city
+
+{
+  "errors": [
+      {
+          "message": "You currently have Essential access which includes access to Twitter API v2 endpoints only. If you need access to this endpoint, you’ll need to apply for Elevated access via the Developer Portal. You can learn more here: https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api#v2-access-leve",
+          "code": 453
+      }
+  ]
+}

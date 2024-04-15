@@ -1,0 +1,4 @@
+SELECT order_id AS "Order IDs that include Fries"
+FROM order_items AS oi JOIN products AS p
+ON oi.product_id = p.id
+WHERE p.product_name = 'Fries';

@@ -1,0 +1,10 @@
+SELECT orders.*, products.*
+FROM orders JOIN order_items
+ON orders.id = order_items.order_id
+JOIN products
+ON order_items.product_id = products.id;
+
+SELECT order_items.order_id, products.product_name
+FROM products INNER JOIN order_items
+ON products.id = order_items.product_id
+ORDER BY order_items.order_id;

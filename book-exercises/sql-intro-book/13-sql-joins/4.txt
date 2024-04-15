@@ -1,0 +1,7 @@
+SELECT singers.first_name, singers.last_name, albums.album_name, albums.release_date
+FROM singers INNER JOIN albums
+ON singers.id = albums.singer_id
+WHERE singers.deceased = false
+AND date_part('year', albums.release_date) >= 1980
+AND date_part('year', albums.release_date) < 1990
+ORDER BY date_of_birth DESC;

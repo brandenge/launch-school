@@ -1,0 +1,24 @@
+Look up the tweet ID by just going to my user account, finding the tweet to delete, clicking on it will show the ID in the URL after "status" in the path.
+
+For example, the individual tweet URL is:
+https://twitter.com/JaneDoe01393853/status/1474432361295134724
+
+So the 1474432361295134724 at the end of the path is the tweet ID.
+
+This gets sent as a path variable parameter in Postman which then gets encoded with the authorization so it does not show up in the request URL.
+
+To delete a tweet, select "Manage Tweets" in the left column in Postman, and then "Delete a Tweet"
+
+HTTP Request
+
+(authorizations and ID path variable parameter included)
+
+DELETE https://api.twitter.com/2/tweets/:id
+
+HTTP Response
+
+{
+  "data": {
+      "deleted": true
+  }
+}

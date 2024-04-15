@@ -1,0 +1,22 @@
+Put the text of the tweet in the body of the request, not as a query parameter.
+
+See this Twitter doc for more info:
+
+https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/quick-start
+
+To create a tweet, select "Manage Tweets" in the left column in Postman, and then "Create a Tweet"
+
+HTTP Request
+
+(authorizations and body parameter included)
+
+POST https://api.twitter.com/2/tweets
+
+HTTP Response
+
+{
+  "data": {
+      "id": "1474434806918393862",
+      "text": "Testing Hello World Again!"
+  }
+}
